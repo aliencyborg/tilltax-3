@@ -19,6 +19,11 @@
 */
 
 export default {
+  // my text-sizes:
+  '6xl': '4rem', // 64px
+  '7xl': '5rem', // 80px
+  '8xl': '6rem', // 96px
+
   xs: '.75rem', // 12px
   sm: '.875rem', // 14px
   base: '1rem', // 16px

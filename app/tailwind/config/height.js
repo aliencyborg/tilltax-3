@@ -17,6 +17,7 @@
 export default {
   // my heights:
   'sh-98': '98vh',
+  'sh-1/3': '33.33vh',
 
   auto: 'auto',
   px: '1px',
