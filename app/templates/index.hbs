@@ -1,10 +1,14 @@
 <div class="flex flex-1 justify-center">
   <div class="flex flex-col justify-center">
-    <div class="flex flex-col text-center">
-      <h1 class="py-4 title-font text-5xl sm:text-6xl xl:text-8xl font-normal">
-        TILL TAX
-      </h1>
-      <img alt="Till Tax Logo" src="/assets/images/logo.png" class="h-sh-1/3">
-    </div>
+    <LinkTo @route="home">
+      <div class="flex flex-col text-center">
+        <h1 class="py-4 title-font text-5xl sm:text-6xl xl:text-8xl font-normal">
+          TILL TAX
+        </h1>
+        <div class="h-sh-1/3 flex justify-center">
+          <img alt="Till Tax Logo" src="/assets/images/logo.png" class="object-contain flex-grow">
+        </div>
+      </div>
+    </LinkTo>
   </div>
 </div>

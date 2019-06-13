@@ -1,5 +1,16 @@
 @import 'tailwind';
 
+// GLOBAL STYLES
+html {
+  body {
+    a, a:hover {
+      color: unset;
+      text-decoration: none;
+      text-decoration-color: none;
+    }
+  }
+}
+
 // FONTS
 @import url('https://use.typekit.net/tar5rbi.css');
 
