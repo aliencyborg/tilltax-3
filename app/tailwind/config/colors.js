@@ -15,6 +15,9 @@
 */
 
 export default {
+  // my colors:
+  ivory: '#fffff0',
+
   transparent: 'transparent',
 
   black: '#22292f',

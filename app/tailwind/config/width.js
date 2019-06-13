@@ -20,6 +20,9 @@
 */
 
 export default {
+  // my widths:
+  'sw-98': '98vw',
+
   auto: 'auto',
   px: '1px',
   '1': '0.25rem',
