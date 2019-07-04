@@ -22,6 +22,7 @@
 export default {
   // my widths:
   'sw-98': '98vw',
+  'sw-1/4': '25vw',
 
   auto: 'auto',
   px: '1px',
