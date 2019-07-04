@@ -21,6 +21,12 @@ Router.map(function() {
       })
     })
   })
+
+  this.route('services', function() {
+    this.route('quickbooks', function() {
+      this.route('payroll')
+    })
+  })
 })
 
 export default Router
