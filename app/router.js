@@ -7,7 +7,20 @@ const Router = EmberRouter.extend({
 })
 
 Router.map(function() {
-  this.route('home')
+  this.route('home', function() {
+    this.route('services', function() {
+      this.route('accounting')
+      this.route('quickbooks')
+      this.route('taxes', function() {
+        this.route('corporation')
+        this.route('day-care')
+        this.route('individual')
+        this.route('military')
+        this.route('payroll')
+        this.route('small-business')
+      })
+    })
+  })
 })
 
 export default Router
