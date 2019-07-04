@@ -7,25 +7,24 @@ const Router = EmberRouter.extend({
 })
 
 Router.map(function() {
-  this.route('home', function() {
-    this.route('services', function() {
-      this.route('accounting')
-      this.route('quickbooks')
-      this.route('taxes', function() {
-        this.route('corporation')
-        this.route('day-care')
-        this.route('individual')
-        this.route('military')
-        this.route('payroll')
-        this.route('small-business')
-      })
-    })
-  })
-
-  this.route('services', function() {
-    this.route('quickbooks', function() {
-      this.route('payroll')
-    })
+  this.route('home', { path: '/' }, function() {
+    this.route(
+      'services',
+      { path: '/services', resetNamespace: true },
+      function() {
+        this.route('accounting')
+        this.route('quickbooks', function() {
+          this.route('payroll')
+        })
+        this.route('taxes', function() {
+          this.route('corporation')
+          this.route('day-care')
+          this.route('individual')
+          this.route('military')
+          this.route('small-business')
+        })
+      }
+    )
   })
 })
 
