@@ -10,15 +10,25 @@ export default class ApplicationRoute extends Route {
   @action
   didTransition() {
     this._super(...arguments)
-    this._trackPage()
+
+    scheduleOnce('afterRender', () => {
+      this._setSplash()
+      this._trackPage()
+    })
+  }
+
+  _setSplash() {
+    if (this.router.currentURL !== '/') {
+      this.controller.showSplash = false
+    } else {
+      this.controller.showSplash = true
+    }
   }
 
   _trackPage() {
-    scheduleOnce('afterRender', () => {
-      const page = this.router.currentURL
-      const title = this.router.currentRouteName
+    const page = this.router.currentURL
+    const title = this.router.currentRouteName
 
-      this.metrics.trackPage({ page, title })
-    })
+    this.metrics.trackPage({ page, title })
   }
 }
