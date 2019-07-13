@@ -1,2 +1,6 @@
-  Home
+{{#if this.showHide.showSplash}}
+  <SplashLogo @onDismiss={{this.hideSplash}} />
+{{else}}
+  Home Index
   {{outlet}}
+{{/if}}

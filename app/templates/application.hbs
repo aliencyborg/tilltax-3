@@ -1,7 +1,3 @@
 <div class="h-screen w-screen flex bg-ivory border-purple-lighter border-4">
-  {{#if this.showSplash}}
-    <SplashLogo @onDismiss={{this.hideSplash}} />
-  {{else}}
-    {{outlet}}
-  {{/if}}
+  {{outlet}}
 </div>

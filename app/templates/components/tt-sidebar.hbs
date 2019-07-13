@@ -1,11 +1,11 @@
 <div class="flex bg-yellow w-sw-1/4">
   <ul>
-    <LinkTo @route="home" @query={{hash showSplash=true}}>
+    <LinkTo @route="home.index" @query={{hash splash=true}}>
       [ LOGO ]
     </LinkTo>
     <hr>
     <li>
-      <LinkTo @route="home">Till Tax</LinkTo>
+      <LinkTo @route="home.index" @query={{hash splash=false}}>Till Tax</LinkTo>
     </li>
     <li>
       <ul>

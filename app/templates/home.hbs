@@ -1,9 +1,13 @@
 <div class="flex w-full h-full">
-  <TtSidebar />
+  {{#if this.showHide.showSplash}}
+    {{outlet}}
+  {{else}}
+    <TtSidebar />
 
-  <div class="flex flex-grow">
-    <div class="pg-purple-lightest flex-1">
-      {{outlet}}
+    <div class="flex flex-grow">
+      <div class="pg-purple-lightest flex-1">
+        {{outlet}}
+      </div>
     </div>
-  </div>
+  {{/if}}
 </div>

@@ -12,17 +12,8 @@ export default class ApplicationRoute extends Route {
     this._super(...arguments)
 
     scheduleOnce('afterRender', () => {
-      this._setSplash()
       this._trackPage()
     })
-  }
-
-  _setSplash() {
-    if (this.router.currentURL !== '/') {
-      this.controller.showSplash = false
-    } else {
-      this.controller.showSplash = true
-    }
   }
 
   _trackPage() {
